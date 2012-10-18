@@ -32,6 +32,7 @@ LossyStream.prototype.pause = function () {
 
 LossyStream.prototype.resume = function () {
   this.paused = false;
+  this.emit('drain');
 };
 
 LossyStream.prototype.destroy = function () {
