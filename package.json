@@ -1,5 +1,5 @@
 {
-  "name": "node-lossystream",
+  "name": "lossystream",
   "version": "0.0.1",
   "description": "drop packets when the upstream exerts backpressure",
   "main": "index.js",
