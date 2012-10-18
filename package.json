@@ -1,0 +1,19 @@
+{
+  "name": "node-lossystream",
+  "version": "0.0.1",
+  "description": "drop packets when the upstream exerts backpressure",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tmpvar/node-lossystream"
+  },
+  "keywords": [
+    "stream",
+    "lossy"
+  ],
+  "author": "Elijah Insua <tmpvar@gmail.com>",
+  "license": "BSD"
+}
