@@ -16,4 +16,4 @@ someStream.pipe(lossy()).pipe(slowStream)`
 
 __why?__
 
-I'm using this to push images (640x480) to the browser over binary websockets.
+I'm using this to push images (640x480) to the browser over binary websockets. The browser freezes if I try to send this much data 30 times a second.
