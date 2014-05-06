@@ -20,6 +20,7 @@ util.inherits(LossyStream, Stream);
 LossyStream.prototype.write = function(d) {
   if (!this.writable || this.paused) {
     // drop the data
+    this.emit('drop', d);
     return;
   }
 
