@@ -10,7 +10,11 @@ __usage__
 
 var lossy = require('lossystream');
 
-someStream.pipe(lossy()).pipe(slowStream)`
+var dropped = function(d) {
+  // d contains the data that was dropped
+};
+
+someStream.pipe(lossy().on('drop', dropped)).pipe(slowStream);
 
 ```
 
