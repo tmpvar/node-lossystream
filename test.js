@@ -5,9 +5,14 @@ lossy.once('data', function() {
   // expect packets to be dropped
   lossy.paused = true;
   lossy.once('data', function() {
-    console.log('how?')
     assert.ok(false);
   });
+
+  var dropped = 0;
+  lossy.on('drop', function() {
+    dropped++;
+  });
+
   lossy.write('hello again');
 
   setTimeout(function() {
@@ -27,6 +32,7 @@ lossy.once('data', function() {
 
     setTimeout(function() {
       assert.ok(called);
+      assert.equal(dropped, 1);
     }, 100);
 
   }, 100);
